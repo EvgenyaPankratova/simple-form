@@ -17,85 +17,102 @@
           </div>
         </div>
 
-        <form>
-            <div class="form_base_container">
-
+        <form action="https://httpbin.org/post" method="post">
+          <div class="form_base_container">
             <div>
-            <label for="name">Имя</label>
-                <input type="text" name="name"/>
+              <label for="name">Имя</label>
+              <input type="text" name="name" id="name" />
             </div>
 
             <div>
-            <label for="email">
-                E-mail</label>
-                <input type="email" name="email"/>
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" />
             </div>
-
 
             <div class="field">
-  <label for="theme">Тема обращения</label>
+              <label for="theme">Тема обращения</label>
 
-  <div class="select">
-    <select id="theme" name="theme" class="select__native">
-      <option value="1">Техническая проблема</option>
-      <option value="2">Вопрос по оплате</option>
-      <option value="3">Сотрудничество</option>
-      <option value="4">Другое</option>
-    </select>
+              <div class="select">
+                <select id="theme" name="theme" class="select__native">
+                  <option value="1">Техническая проблема</option>
+                  <option value="2">Вопрос по оплате</option>
+                  <option value="3">Сотрудничество</option>
+                  <option value="4">Другое</option>
+                </select>
 
-    <button type="button" class="select__trigger" aria-haspopup="listbox" aria-expanded="false">
-      <span class="select__value">Техническая проблема</span>
-    </button>
+                <button
+                  type="button"
+                  class="select__trigger"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                >
+                  <span class="select__value">Техническая проблема</span>
+                </button>
 
-    <ul class="select__list" role="listbox" hidden>
-      <li role="option" data-value="1">Техническая проблема</li>
-      <li role="option" data-value="2">Вопрос по оплате</li>
-      <li role="option" data-value="3">Сотрудничество</li>
-      <li role="option" data-value="4">Другое</li>
-    </ul>
-  </div>
-</div>
+                <ul class="select__list" role="listbox" hidden>
+                  <li role="option" data-value="1">Техническая проблема</li>
+                  <li role="option" data-value="2">Вопрос по оплате</li>
+                  <li role="option" data-value="3">Сотрудничество</li>
+                  <li role="option" data-value="4">Другое</li>
+                </ul>
+              </div>
+            </div>
 
             <div>
-            <label for="number">
-                Номер заказа</label>
-                <input type="number" name="number"/>
+              <label for="number">Номер заказа</label>
+              <input type="number" name="number" id="number" />
             </div>
+          </div>
 
-            </div>
+          <div>
+            <label for="message">Сообщение</label>
+            <textarea name="message" id="message">
+Опишите вашу проблему...</textarea
+            >
+          </div>
 
+          <div class="checkbox">
+            <input
+              class="checkboxCurrent"
+              type="checkbox"
+              name="check"
+              id="check"
+            />
+            <label for="check"
+              >Я принимаю условия использования сервиса и политику обработки
+              персональных данных.</label
+            >
+          </div>
 
-            <div>
-            <label for="message">
-                Сообщение</label>
-                <textarea name="message">Опишите вашу проблему...</textarea>
-            </div>
-
-            <div class="checkbox">
-            <input class="checkboxCurrent" type="checkbox" name="check"/>
-            <label for="check">Я принимаю условия использования сервиса и политику обработки персональных данных.</label>
-            </div>
-
-            <button type="submit">Отправить</button>
+          <button type="submit">Отправить</button>
         </form>
-
       </section>
 
       <section class="contactsBlock">
         <address class="contactsBlock_contacts">
-          <div class="contactsBlock_contacts_title title">Контакты поддержки</div>
+          <div class="contactsBlock_contacts_title title">
+            Контакты поддержки
+          </div>
           <div class="contactsBlock_contacts_content">
             <div class="contactsBlock_contacts_content_email">
               <div class="contactsBlock_contacts_content_title">E-mail</div>
-              <div class="contactsBlock_contacts_content_subtitle">support@orbit.app</div>
+              <div class="contactsBlock_contacts_content_subtitle">
+                support@orbit.app
+              </div>
             </div>
             <div class="contactsBlock_contacts_content_tel">
               <div class="contactsBlock_contacts_content_title">Телефон</div>
-              <div  class="contactsBlock_contacts_content_subtitle">+7 (800) 555‑18‑25</div>
+              <div class="contactsBlock_contacts_content_subtitle">
+                +7 (800) 555‑18‑25
+              </div>
             </div>
             <div class="contactsBlock_contacts_content_hours">
-              <div class="contactsBlock_contacts_content_title">Время работы</div>
-              <div  class="contactsBlock_contacts_content_subtitle">09:00 — 21:00 ежедневно</div>
+              <div class="contactsBlock_contacts_content_title">
+                Время работы
+              </div>
+              <div class="contactsBlock_contacts_content_subtitle">
+                09:00 — 21:00 ежедневно
+              </div>
             </div>
           </div>
         </address>
@@ -104,12 +121,12 @@
           <div class="contactsBlock_info_title title">Что дальше?</div>
           <ul class="contactsBlock_info_content">
             <li>Заявка попадает в очередь поддержки.</li>
-            <li>Мы анализируем обращение и уточняем детали при необходимости.</li>
+            <li>
+              Мы анализируем обращение и уточняем детали при необходимости.
+            </li>
             <li>Ответ приходит на указанную электронную почту.</li>
-          </div>
+          </ul>
         </div>
-
-
       </section>
     </div>
 
