@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d1220;
+  color: #eef3ff;
+  padding: 20px 0;
+  font-family: "SegoeUI";
+}
+
+section {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(21, 29, 49, 1);
+  border-radius: 32px;
+  padding: 40px;
+}
+
+.commonBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
+  max-width: 1180px;
+}
+
+.formBlock {
+  width: 690px;
+  height: 100%;
+}
+
+.formBlock_titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+
+  & > h3 {
+    font-size: 40px;
+    font-family: "SegoeUIBold";
+  }
+
+  .formBlock_titleBlock_subtitle {
+    font-size: 16px;
+    color: rgba(155, 167, 199, 0.92);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & * {
+    width: 100%;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+  button {
+    background: rgba(111, 124, 255, 1);
+    border-radius: 20px;
+    color: inherit;
+    padding: 19.5px 0;
+    outline: none;
+    border: none;
+    font-family: "SegoeUIBold";
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.form_base_container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 16px;
+
+  input {
+    padding: 17.5px 16px;
+    background: rgba(15, 22, 40, 1);
+    border-radius: 20px;
+    color: inherit;
+    outline: none;
+    border: 1px solid rgba(43, 54, 86, 1);
+    font-size: 16px;
+  }
+}
+
+/*  */
+.select {
+  position: relative;
+  font-size: 16px;
+}
+
+.select__native {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.select__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17.5px 16px;
+  padding-right: 19px;
+  background: rgba(15, 22, 40, 1);
+  border: 1px solid rgba(43, 54, 86, 1);
+  border-radius: 20px;
+  color: #fff;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.select__trigger::after {
+  content: "";
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgba(255, 255, 255, 1);
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.2s ease;
+  transform-origin: 50% 50%;
+}
+
+.select.is-open .select__trigger::after {
+  transform: rotate(-135deg) translate(-2px, -2px);
+}
+
+.select__trigger:focus-visible {
+  outline: none;
+}
+
+.select__list {
+  position: absolute;
+  inset: calc(100% + 8px) 0 auto;
+  margin: 0;
+  list-style: none;
+  background: rgba(15, 22, 40, 1);
+  border: 1px solid rgba(43, 54, 86, 1);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  z-index: 10;
+}
+
+.select__list [role="option"] {
+  padding: 8px 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.select__list [role="option"]:first-child {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.select__list [role="option"]:last-child {
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.select__list [role="option"]:hover,
+.select__list [role="option"].is-active {
+  background-color: rgba(111, 124, 255, 0.5);
+}
+
+.select__list [role="option"][aria-selected="true"] {
+  background-color: rgba(111, 124, 255, 1);
+}
+/*  */
+
+textarea {
+  padding: 17.5px 16px;
+  background: rgba(15, 22, 40, 1);
+  border-radius: 20px;
+  color: inherit;
+  outline: none;
+  border: 1px solid rgba(43, 54, 86, 1);
+  resize: none;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.checkbox {
+  display: flex;
+  font-size: 16px;
+  align-items: baseline;
+  gap: 8px;
+
+  input {
+    width: 16px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.contactsBlock {
+  width: 466px;
+
+  & > * {
+    background: rgba(15, 22, 40, 1);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & .title {
+      font-size: 20px;
+    }
+  }
+}
+
+.contactsBlock_contacts {
+  margin-bottom: 32px;
+  font-style: normal;
+}
+
+.title {
+  font-size: 20px;
+  font-family: "SegoeUIBold";
+}
+
+.contactsBlock_contacts_content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactsBlock_contacts_content_title {
+  color: rgba(139, 151, 184, 1);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.contactsBlock_contacts_content_subtitle {
+  color: rgba(201, 210, 235, 1);
+}
+
+.contactsBlock_info_content {
+  & ul {
+    counter-reset: my-counter;
+  }
+  & li {
+    list-style-type: none;
+    counter-increment: my-counter;
+    padding: 16.5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 40px;
+    position: relative;
+    font-size: 16px;
+  }
+  & li::before {
+    content: counter(my-counter);
+    background: rgba(42, 55, 96, 1);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+}
+
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../fonts/SegoeUI.woff2") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SegoeUIBold";
+  src: url("../fonts/SegoeUIBold.woff2") format("truetype");
+  font-style: bold;
+  font-weight: 700;
+}
